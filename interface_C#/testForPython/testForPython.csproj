@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CF44DD1-3E8E-4955-8853-F40125E1117A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>testForPython</RootNamespace>
+    <AssemblyName>testForPython</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.6\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACalGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ACalGroup.Designer.cs">
+      <DependentUpon>ACalGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AStudent.Designer.cs">
+      <DependentUpon>AStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DimensionTongzhiItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DimensionTongzhiItem.Designer.cs">
+      <DependentUpon>DimensionTongzhiItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemLabel.Designer.cs">
+      <DependentUpon>ItemLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessBarForm.Designer.cs">
+      <DependentUpon>ProcessBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollBar.Designer.cs">
+      <DependentUpon>ScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassDimension.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassDimension.Designer.cs">
+      <DependentUpon>ClassDimension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SingleResult.Designer.cs">
+      <DependentUpon>SingleResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="studentMini.Designer.cs">
+      <DependentUpon>studentMini.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ACalGroup.resx">
+      <DependentUpon>ACalGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AStudent.resx">
+      <DependentUpon>AStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DimensionTongzhiItem.resx">
+      <DependentUpon>DimensionTongzhiItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemLabel.resx">
+      <DependentUpon>ItemLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessBarForm.resx">
+      <DependentUpon>ProcessBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollBar.resx">
+      <DependentUpon>ScrollBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassDimension.resx">
+      <DependentUpon>ClassDimension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleResult.resx">
+      <DependentUpon>SingleResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentMini.resx">
+      <DependentUpon>studentMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\but4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weidu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextStep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lastStep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jieguo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jieguo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jieguo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jieguo11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分组结果1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分组结果2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分组结果3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分组结果4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\同异质分配1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\同异质分配2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\同异质分配3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\同异质分配4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension1_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension2_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension_button_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dimension_button_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi1_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongzhiItem61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右侧栏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classIma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classIma1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_stu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classDimension10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\进度条.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centerPart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下一步按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centerHeading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figres0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centerHeading1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singleResult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singleResult1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newGroup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearItems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centerPart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centerPart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\微信图片_20220705190311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\微信图片_202207051903111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firstBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firstBorder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firstBorder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\左侧栏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jieguo21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\右侧栏1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mytry.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
