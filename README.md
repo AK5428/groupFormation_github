@@ -1,5 +1,32 @@
 # Read Me for this group formation system
 
+## Screenshots for the system
+Click to see the fullsize pictures.
+<table>
+  <tr>
+    <td width="25%">
+      <a href="images/English version-1.jpg">
+        <img src="images/English version-1.jpg" alt="Dashboard" width="100%"/>
+      </a>
+    </td>
+    <td width="25%">
+      <a href="images/English version-2.jpg">
+        <img src="images/English version-2.jpg" alt="Attribute Selection" width="100%"/>
+      </a>
+    </td>
+    <td width="25%">
+      <a href="images/English version-3.jpg">
+        <img src="images/English version-3.jpg" alt="Homogeneity and Heterogeneity Settings" width="100%"/>
+      </a>
+    </td>
+    <td width="25%">
+      <a href="images/English version-4.jpg">
+        <img src="images/English version-4.jpg" alt="Grouping Results" width="100%"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Introduction for the files
 
 1. Read me: the introduction file;
