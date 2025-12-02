@@ -1,7 +1,7 @@
 # Read Me for this group formation system
 
 ## Screenshots for the system
-Click to see the fullsize pictures.
+Click to view the fullsize pictures.
 <table>
   <tr>
     <td width="25%">
